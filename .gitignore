@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+*.env
+*.local
+
+# Firebase/Admin secrets
+firebaseConfig.json
+server/firebase/firebaseConfig.json
+*firebase-adminsdk*.json
+
+# Build outputs
+connect-flourish-ai-main/dist/
+dist/
+build/
+.output/
+.vinxi/
+.tanstack/**
+.nitro/
+
+# Cloudflare/Wrangler local state
+.wrangler/
+.dev.vars
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Generated reports
+repomix-output.xml
