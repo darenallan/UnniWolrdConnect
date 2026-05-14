@@ -22,8 +22,10 @@ const app = express();
 // Logging des requêtes pour le débogage + Forçage CORS
 app.use((req, res, next) => {
   const origin = req.headers.origin;
-  if (origin && origin.includes("localhost")) {
+  if (origin) {
     res.setHeader("Access-Control-Allow-Origin", origin);
+  } else {
+    res.setHeader("Access-Control-Allow-Origin", "*");
   }
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
